@@ -29,7 +29,7 @@ export default function PageHero({ eyebrow, title, lead, waveColor = 'ivory' }) 
         .page-hero {
           position: relative;
           padding: 82px 0 0;
-          background: linear-gradient(135deg, #3a1d5d 0%, #5d3d8d 38%, #4a2f6d 100%);
+          background: linear-gradient(135deg, #2a1645 0%, #442663 38%, #351c53 100%);
           overflow: hidden;
         }
         .page-hero__inner {

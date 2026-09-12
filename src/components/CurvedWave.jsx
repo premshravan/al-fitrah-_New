@@ -8,9 +8,9 @@ const COLOR_MAP = {
   ivory: 'var(--ivory)',
   cream: '#f8eebd',
   'ivory-deep': 'var(--ivory-deep)',
-  tinted: 'rgba(78, 54, 104, 0.92)',
+  tinted: 'rgba(58, 36, 82, 0.96)',
   deep: 'var(--green-deep)',
-  'deep-plum': '#3a1d5d',
+  'deep-plum': '#2a1645',
   gold: 'var(--gold)',
   apricot: 'var(--apricot)',
   lilac: '#eee4f8',
@@ -56,8 +56,6 @@ export default function CurvedWave({
         <path
           d="M -10,76 C 140,50 260,36 380,36 C 540,36 680,68 810,83 C 900,92 950,94 1000,94 C 1130,94 1280,66 1450,16 L 1450,130 L -10,130 Z"
           fill={resolvedFill}
-          stroke={resolvedFill}
-          strokeWidth="1"
         />
       </svg>
     </div>

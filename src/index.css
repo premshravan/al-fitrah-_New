@@ -8,10 +8,10 @@
   color-scheme: light;
 
   /* Color Palette */
-  --green-deep: #55317a;       /* Plum brand anchor */
-  --green-deep-ink: #302047;   /* Deep purple text */
-  --green-emerald: #7652a8;    /* Bright learning purple */
-  --leaf: #8a65b5;             /* Soft purple accent */
+  --green-deep: #432461;       /* Plum brand anchor */
+  --green-deep-ink: #261737;   /* Deep purple text */
+  --green-emerald: #62418a;    /* Bright learning purple */
+  --leaf: #76539f;             /* Soft purple accent */
   --leaf-light: #eee5fb;       /* Soft lilac tint */
   --gold: #f6c945;             /* Sunlit yellow */
   --gold-light: #fff2b8;       /* Soft yellow tint */
@@ -33,9 +33,9 @@
   --grad-sun: #f6c945;
   --grad-peach: #f2c45b;
   --grad-lilac: #d8c5ee;
-  --grad-rainbow: #7652a8;
-  --grad-emerald: #55317a;
-  --grad-emerald-subtle: #432460;
+  --grad-rainbow: #62418a;
+  --grad-emerald: #432461;
+  --grad-emerald-subtle: #351b4d;
   --grad-gold: #f66e45;
   --grad-apricot: #e59b2f;
   --grad-sunset: #d98c26;
@@ -182,7 +182,8 @@ ul {
 
 .curved-wave-svg {
   width: 100%;
-  height: clamp(38px, 5.6vw, 82px);
+  height: auto;
+  aspect-ratio: 1440 / 120;
   display: block;
   vertical-align: bottom;
   overflow: hidden;
@@ -194,15 +195,12 @@ ul {
   .section {
     padding: 48px 0;
   }
-  .curved-wave-svg {
-    height: clamp(32px, 7vw, 48px);
-  }
 }
 
 
 /* Soft translucent lilac section surface */
 .section--tinted {
-  background: rgba(78, 54, 104, 0.92);
+  background: rgba(58, 36, 82, 0.96);
   color: var(--ivory);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);

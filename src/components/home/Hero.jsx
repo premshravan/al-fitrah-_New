@@ -110,7 +110,7 @@ export default function Hero() {
           position: relative;
           padding: 64px 0 96px;
           overflow: hidden;
-          background: linear-gradient(135deg, #3a1d5d 0%, #5d3d8d 38%, #4a2f6d 100%);
+          background: linear-gradient(135deg, #2a1645 0%, #442663 38%, #351c53 100%);
         }
         .hero__ambient-glow {
           position: absolute;

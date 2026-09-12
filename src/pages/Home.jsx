@@ -24,7 +24,7 @@ export default function Home() {
       />
       <div className="home-page">
         <Hero />
-        <CurvedWave color="cream" bg="#4a2f6d" />
+        <CurvedWave color="cream" bg="#351c53" />
         <TrustStrip />
         <CurvedWave color="ivory" bg="cream" flipX />
         <WhyAlFitrah />
