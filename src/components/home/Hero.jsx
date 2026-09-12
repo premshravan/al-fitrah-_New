@@ -9,12 +9,19 @@ export default function Hero() {
       <div className="hero__ambient-glow hero__ambient-glow--blue" />
       <div className="hero__ambient-glow hero__ambient-glow--coral" />
 
+      {/* Playful Floating Ambient Doodles for Kids & Warmth */}
+      <div className="floating-doodle floating-doodle--1" style={{ top: '12%', left: '4%', fontSize: '1.8rem', opacity: 0.85 }} aria-hidden="true">🌙</div>
+      <div className="floating-doodle floating-doodle--twinkle" style={{ top: '18%', left: '46%', fontSize: '1.4rem', opacity: 0.9 }} aria-hidden="true">✨</div>
+      <div className="floating-doodle floating-doodle--2" style={{ top: '78%', left: '8%', fontSize: '1.6rem', opacity: 0.8 }} aria-hidden="true">🍃</div>
+      <div className="floating-doodle floating-doodle--3" style={{ top: '10%', right: '8%', fontSize: '1.5rem', opacity: 0.85 }} aria-hidden="true">⭐</div>
+      <div className="floating-doodle floating-doodle--1" style={{ bottom: '14%', right: '4%', fontSize: '1.6rem', opacity: 0.8 }} aria-hidden="true">🎈</div>
+
       <div className="container hero__grid">
         <div className="hero__copy">
           <div className="hero__badge">
-            <span className="hero__badge-pulse" />
+            <span className="live-dot" />
             <LeafIcon />
-            <span>Islamic Preschool &bull; Thalassery, Kannur</span>
+            <span>Admissions Open 2026–27 &bull; Thalassery</span>
           </div>
 
           <h1>
@@ -42,6 +49,13 @@ export default function Hero() {
             </a>
           </div>
 
+          {/* Quick Delight Pills for Parents */}
+          <div className="hero__quick-pills">
+            <span className="sticker-badge sticker-badge--gold">📖 Nour Al Bayan Method</span>
+            <span className="sticker-badge sticker-badge--purple">🧸 Loving Ayahs &amp; Teachers</span>
+            <span className="sticker-badge sticker-badge--mint">🎨 Play-Based Discovery</span>
+          </div>
+
           <div className="hero__numbers">
             <span className="hero__numbers-label">Admissions &amp; Enquiry Desk:</span>
             <div className="hero__numbers-links">
@@ -56,8 +70,8 @@ export default function Hero() {
           <div className="hero__visual-glow" />
           <div className="hero__blob blob">
             <img
-              src="/images/brochure-abacus.jpg"
-              alt="A smiling Al-Fitrah preschool student holding a counting abacus in her classroom"
+              src="/images/galleries/photo_2026-09-09_12-54-19.jpg"
+              alt="Al-Fitrah preschool children celebrating their graduation with teachers"
             />
           </div>
 
@@ -96,14 +110,7 @@ export default function Hero() {
           position: relative;
           padding: 64px 0 96px;
           overflow: hidden;
-          background: linear-gradient(
-            135deg,
-            rgba(186, 230, 253, 0.55) 0%,
-            rgba(254, 240, 138, 0.52) 25%,
-            rgba(254, 215, 170, 0.45) 50%,
-            rgba(187, 247, 208, 0.52) 75%,
-            rgba(233, 213, 255, 0.48) 100%
-          );
+          background: linear-gradient(135deg, #3a1d5d 0%, #5d3d8d 38%, #4a2f6d 100%);
         }
         .hero__ambient-glow {
           position: absolute;
@@ -115,28 +122,28 @@ export default function Hero() {
         .hero__ambient-glow--emerald {
           width: 520px;
           height: 520px;
-          background: radial-gradient(circle, rgba(74, 222, 128, 0.35) 0%, transparent 70%);
+          background: rgba(118, 82, 168, 0.18);
           top: -120px;
           left: -120px;
         }
         .hero__ambient-glow--gold {
           width: 480px;
           height: 480px;
-          background: radial-gradient(circle, rgba(250, 204, 21, 0.38) 0%, transparent 70%);
+          background: rgba(246, 201, 69, 0.3);
           bottom: -80px;
           right: -60px;
         }
         .hero__ambient-glow--blue {
           width: 460px;
           height: 460px;
-          background: radial-gradient(circle, rgba(56, 189, 248, 0.38) 0%, transparent 70%);
+          background: rgba(216, 197, 238, 0.3);
           top: -80px;
           right: 25%;
         }
         .hero__ambient-glow--coral {
           width: 420px;
           height: 420px;
-          background: radial-gradient(circle, rgba(251, 146, 60, 0.32) 0%, transparent 70%);
+          background: rgba(229, 155, 47, 0.22);
           bottom: -60px;
           left: 30%;
         }
@@ -177,18 +184,17 @@ export default function Hero() {
           margin-top: 18px;
           line-height: 1.12;
           letter-spacing: -0.015em;
+          color: var(--ivory);
         }
         .hero__title-highlight {
           display: inline;
-          background: linear-gradient(135deg, var(--green-deep-ink) 0%, #175440 40%, #B87808 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: var(--gold);
         }
 
         .hero__lead {
           margin-top: 22px;
           font-size: 1.15rem;
-          color: var(--ink-soft);
+          color: rgba(255, 250, 240, 0.88);
           max-width: 48ch;
           line-height: 1.62;
         }
@@ -200,7 +206,7 @@ export default function Hero() {
           flex-wrap: wrap;
         }
         .hero__cta-main {
-          background: linear-gradient(135deg, #FF9E64 0%, var(--apricot) 50%, #E66A23 100%);
+          background: var(--apricot);
           box-shadow: 0 12px 28px -8px rgba(242, 136, 75, 0.65);
         }
         .hero__cta-main:hover {
@@ -223,8 +229,16 @@ export default function Hero() {
           fill: currentColor;
         }
 
+        .hero__quick-pills {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-wrap: wrap;
+          margin-top: 22px;
+        }
+
         .hero__numbers {
-          margin-top: 24px;
+          margin-top: 20px;
           display: flex;
           align-items: center;
           gap: 10px;
@@ -233,7 +247,7 @@ export default function Hero() {
         }
         .hero__numbers-label {
           font-weight: 600;
-          color: var(--ink-soft);
+          color: rgba(255, 250, 240, 0.72);
         }
         .hero__numbers-links {
           display: flex;
@@ -242,7 +256,7 @@ export default function Hero() {
         }
         .hero__numbers-links a {
           font-weight: 700;
-          color: var(--green-deep);
+          color: var(--ivory);
           text-decoration: underline;
         }
         .hero__numbers-links a:hover {
@@ -259,7 +273,7 @@ export default function Hero() {
         .hero__visual-glow {
           position: absolute;
           inset: 10% 10% 10% 10%;
-          background: linear-gradient(135deg, rgba(240, 178, 58, 0.35) 0%, rgba(27, 75, 58, 0.3) 100%);
+          background: rgba(246, 201, 69, 0.3);
           filter: blur(45px);
           border-radius: 50%;
           z-index: 1;
@@ -268,6 +282,8 @@ export default function Hero() {
           position: relative;
           z-index: 2;
           aspect-ratio: 4 / 4.7;
+          border-radius: 34% 66% 52% 48% / 24% 28% 72% 76%;
+          border: 10px solid rgba(255, 249, 233, 0.82);
           box-shadow: 0 24px 50px -18px rgba(18, 51, 40, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.6);
         }
         .hero__blob img {
@@ -318,7 +334,7 @@ export default function Hero() {
           bottom: -5%;
           left: 4%;
           z-index: 3;
-          background: linear-gradient(135deg, rgba(18, 51, 40, 0.96) 0%, rgba(27, 75, 58, 0.96) 100%);
+          background: var(--green-deep-ink);
           backdrop-filter: blur(12px);
           color: var(--ivory);
           padding: 10px 18px;

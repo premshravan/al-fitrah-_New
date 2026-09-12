@@ -21,7 +21,7 @@ export default function GalleryPreview() {
             </p>
           </div>
           <Link to="/gallery" className="btn btn-primary gallery-preview__more-btn">
-            View All 33 Photos →
+            View All 30 Photos →
           </Link>
         </div>
 
@@ -49,19 +49,14 @@ export default function GalleryPreview() {
 
         <div className="gallery-preview__footer-mobile">
           <Link to="/gallery" className="btn btn-primary">
-            Explore Full Photo Gallery (33 Photos) →
+            Explore Full Photo Gallery (30 Photos) →
           </Link>
         </div>
       </div>
 
       <style>{`
         .gallery-preview {
-          background: linear-gradient(
-            135deg,
-            rgba(224, 242, 254, 0.75) 0%,
-            rgba(254, 243, 199, 0.70) 50%,
-            rgba(220, 252, 231, 0.75) 100%
-          );
+          background: #eee4f8;
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
           position: relative;
@@ -73,7 +68,7 @@ export default function GalleryPreview() {
           width: 500px;
           height: 500px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, transparent 70%);
+          background: rgba(118, 82, 168, 0.16);
           top: -100px;
           right: -100px;
           pointer-events: none;
@@ -84,7 +79,7 @@ export default function GalleryPreview() {
           width: 450px;
           height: 450px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(250, 204, 21, 0.28) 0%, transparent 70%);
+          background: rgba(246, 201, 69, 0.2);
           bottom: -80px;
           left: -80px;
           pointer-events: none;
@@ -147,7 +142,12 @@ export default function GalleryPreview() {
         .gallery-preview__overlay {
           position: absolute;
           inset: 0;
-          background: linear-gradient(to top, rgba(15, 56, 42, 0.9) 0%, rgba(15, 56, 42, 0.2) 60%, transparent 100%);
+          background: linear-gradient(
+            to top,
+            rgba(48, 32, 71, 0.82) 0%,
+            rgba(48, 32, 71, 0.42) 42%,
+            rgba(48, 32, 71, 0) 72%
+          );
           display: flex;
           flex-direction: column;
           justify-content: flex-end;

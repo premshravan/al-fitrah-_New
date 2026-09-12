@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import PageMeta from '../components/PageMeta'
 import PageHero from '../components/PageHero'
+import CurvedWave from '../components/CurvedWave'
 import FinalCTA from '../components/FinalCTA'
 import { GALLERY_PHOTOS, GALLERY_CATEGORIES } from '../data/galleryPhotos'
 import { SCHOOL } from '../data/schoolInfo'
@@ -189,6 +190,8 @@ export default function Gallery() {
         </div>
       )}
 
+      <CurvedWave color="gold" bg="ivory" />
+
       <FinalCTA />
 
       <style>{`
@@ -223,7 +226,7 @@ export default function Gallery() {
           box-shadow: 0 8px 20px -8px rgba(18, 51, 40, 0.18);
         }
         .gallery-filter-btn.is-active {
-          background: linear-gradient(135deg, var(--green-deep) 0%, #2A6A54 100%);
+          background: var(--green-deep);
           color: var(--ivory);
           border-color: transparent;
           box-shadow: 0 10px 24px -8px rgba(18, 51, 40, 0.45);
@@ -281,12 +284,7 @@ export default function Gallery() {
         .gallery-card__overlay {
           position: absolute;
           inset: 0;
-          background: linear-gradient(
-            to top,
-            rgba(15, 56, 42, 0.95) 0%,
-            rgba(15, 56, 42, 0.6) 45%,
-            rgba(15, 56, 42, 0.05) 100%
-          );
+          background: rgba(48, 32, 71, 0.82);
           opacity: 0;
           display: flex;
           flex-direction: column;
@@ -446,7 +444,7 @@ export default function Gallery() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+          background: #25D366;
           color: #ffffff;
           padding: 8px 18px;
           border-radius: 100px;
@@ -499,12 +497,7 @@ export default function Gallery() {
           }
           .gallery-card__overlay {
             opacity: 1;
-            background: linear-gradient(
-              to top,
-              rgba(15, 56, 42, 0.95) 0%,
-              rgba(15, 56, 42, 0.5) 50%,
-              transparent 100%
-            );
+            background: rgba(48, 32, 71, 0.82);
             padding: 12px;
           }
           .gallery-card__title {

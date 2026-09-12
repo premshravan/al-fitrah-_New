@@ -41,15 +41,24 @@ export default function AdmissionsFlow() {
           background: var(--white);
           padding: 28px 22px;
           border-radius: var(--radius-card);
-          border-top: 4px solid var(--gold);
+          box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.12);
         }
         .admissions-flow__num {
           font-family: var(--font-display);
           font-size: 1.6rem;
           color: var(--leaf);
         }
-        .admissions-flow__card h3 { margin-top: 12px; font-size: 1.05rem; }
-        .admissions-flow__card p { margin-top: 8px; color: var(--ink-soft); font-size: 0.9rem; }
+        .admissions-flow__card h3 {
+          margin-top: 12px;
+          font-size: 1.05rem;
+          font-weight: 700;
+          color: var(--green-deep-ink) !important;
+        }
+        .admissions-flow__card p {
+          margin-top: 8px;
+          color: var(--ink-soft) !important;
+          font-size: 0.9rem;
+        }
         .admissions-flow__cta { margin-top: 40px; }
 
         @media (max-width: 900px) {

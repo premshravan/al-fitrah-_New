@@ -49,6 +49,12 @@ export default function AnnouncementBar() {
           padding: 5px 14px;
           border-radius: 100px;
           font-weight: 700;
+          transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+        }
+        .announcement__cta:hover {
+          color: #000000 !important;
+          background: #ffe375;
+          transform: translateY(-1px);
         }
         @media (max-width: 560px) {
           .announcement__row { justify-content: center; text-align: center; }

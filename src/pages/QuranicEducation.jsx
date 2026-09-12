@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import PageHero from '../components/PageHero'
+import CurvedWave from '../components/CurvedWave'
 import ProcessFlow from '../components/ProcessFlow'
 import FinalCTA from '../components/FinalCTA'
 
@@ -33,6 +34,8 @@ export default function QuranicEducation() {
         </div>
       </section>
 
+      <CurvedWave color="tinted" bg="ivory" />
+
       <section className="section section--tinted quran-topics">
         <div className="container quran-topics__grid">
           {TOPICS.map((t) => (
@@ -43,6 +46,8 @@ export default function QuranicEducation() {
           ))}
         </div>
       </section>
+
+      <CurvedWave color="ivory" bg="tinted" flipX />
 
       <section className="section quran-love">
         <div className="container quran-love__inner">
@@ -57,6 +62,8 @@ export default function QuranicEducation() {
         </div>
       </section>
 
+      <CurvedWave color="gold" bg="ivory" />
+
       <FinalCTA />
 
       <style>{`
@@ -68,11 +75,28 @@ export default function QuranicEducation() {
         }
         .quran-topics__card {
           background: var(--white);
-          padding: 26px;
+          padding: 28px 24px;
           border-radius: var(--radius-card);
+          box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.12);
+          border: 1px solid rgba(27, 75, 58, 0.08);
+          transition: transform 0.22s ease, box-shadow 0.22s ease;
         }
-        .quran-topics__card h3 { font-size: 1.05rem; }
-        .quran-topics__card p { margin-top: 10px; color: var(--ink-soft); font-size: 0.92rem; }
+        .quran-topics__card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.18);
+        }
+        .quran-topics__card h3 {
+          font-size: 1.15rem;
+          font-weight: 700;
+          color: var(--green-deep-ink) !important;
+          margin-bottom: 8px;
+        }
+        .quran-topics__card p {
+          margin-top: 8px;
+          color: var(--ink-soft) !important;
+          font-size: 0.94rem;
+          line-height: 1.6;
+        }
         .quran-love__inner { max-width: 640px; }
         .quran-love h2 { font-size: clamp(1.7rem, 2.6vw, 2.2rem); }
         .quran-love p { margin-top: 16px; color: var(--ink-soft); font-size: 1.02rem; }

@@ -4,10 +4,10 @@ export default function ProblemSolution() {
   return (
     <section className="section section--tinted pas">
       <div className="container pas__grid">
-        <div className="pas__visual blob">
+        <div className="pas__visual pas__visual--framed blob">
           <img
-            src="/images/brochure-instincts.jpg"
-            alt="Al-Fitrah preschool children dressed as fruits and vegetables for a themed classroom activity"
+            src="/images/galleries/photo_2026-09-09_12-54-07.jpg"
+            alt="Al-Fitrah preschool children learning confidence and cooperation through a group performance"
           />
         </div>
 
@@ -40,11 +40,17 @@ export default function ProblemSolution() {
           align-items: center;
         }
         .pas__visual { aspect-ratio: 4/5; box-shadow: var(--shadow-soft); }
+        .pas__visual--framed {
+          border-radius: 42% 58% 62% 38% / 64% 42% 58% 36%;
+          border: 9px solid rgba(255, 246, 207, 0.88);
+          box-shadow: 0 22px 46px -18px rgba(18, 51, 40, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.65);
+          transform: rotate(2deg);
+        }
         .pas__visual img { width: 100%; height: 100%; object-fit: cover; }
         .pas__copy h2 { font-size: clamp(1.9rem, 3vw, 2.4rem); margin-top: 10px; max-width: 16ch; }
-        .pas__copy p { margin-top: 18px; color: var(--ink-soft); font-size: 1.02rem; max-width: 54ch; }
+        .pas__copy p { margin-top: 18px; color: rgba(255, 250, 240, 0.86); font-size: 1.02rem; max-width: 54ch; }
         .pas__solution {
-          color: var(--green-deep-ink) !important;
+          color: var(--ivory) !important;
           font-weight: 600;
           border-left: 3px solid var(--gold);
           padding-left: 16px;

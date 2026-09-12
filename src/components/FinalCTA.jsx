@@ -36,7 +36,7 @@ export default function FinalCTA() {
       <style>{`
         .final-cta {
           position: relative;
-          background: linear-gradient(135deg, #F9CF58 0%, #F5AF26 45%, #E59316 100%);
+          background: var(--gold);
           padding: 100px 0;
           text-align: center;
           overflow: hidden;

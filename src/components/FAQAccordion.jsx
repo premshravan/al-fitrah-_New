@@ -43,12 +43,12 @@ export default function FAQAccordion({ items }) {
         }
         .faq-accordion__icon {
           font-size: 1.3rem;
-          color: var(--apricot);
+          color: var(--white);
           flex-shrink: 0;
         }
         .faq-accordion__answer {
           padding: 0 4px 22px;
-          color: var(--ink-soft);
+          color: var(--ink);
           font-size: 0.96rem;
           max-width: 68ch;
         }

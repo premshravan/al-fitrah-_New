@@ -36,10 +36,20 @@ export default function SafetySection() {
           background: var(--white);
           padding: 26px 22px;
           border-radius: var(--radius-card);
+          box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.12);
         }
         .safety__card span { font-size: 1.6rem; }
-        .safety__card h3 { font-size: 1.02rem; margin-top: 14px; }
-        .safety__card p { margin-top: 8px; color: var(--ink-soft); font-size: 0.88rem; }
+        .safety__card h3 {
+          font-size: 1.05rem;
+          font-weight: 700;
+          color: var(--green-deep-ink) !important;
+          margin-top: 14px;
+        }
+        .safety__card p {
+          margin-top: 8px;
+          color: var(--ink-soft) !important;
+          font-size: 0.88rem;
+        }
 
         @media (max-width: 900px) {
           .safety__grid { grid-template-columns: 1fr 1fr; }

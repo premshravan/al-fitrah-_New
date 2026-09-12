@@ -60,7 +60,7 @@ export default function FloatingWhatsApp() {
           place-items: center;
           width: 58px;
           height: 58px;
-          background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+          background: #25D366;
           color: #ffffff;
           border-radius: 50%;
           box-shadow: 0 12px 28px -6px rgba(18, 140, 126, 0.55), 0 0 0 1px rgba(255,255,255,0.25);

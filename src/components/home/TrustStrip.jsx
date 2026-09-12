@@ -22,44 +22,35 @@ export default function TrustStrip() {
 
       <style>{`
         .trust-strip {
-          background: linear-gradient(
-            90deg,
-            rgba(224, 242, 254, 0.88) 0%,
-            rgba(254, 243, 199, 0.88) 25%,
-            rgba(254, 215, 170, 0.78) 50%,
-            rgba(220, 252, 231, 0.88) 75%,
-            rgba(238, 222, 254, 0.88) 100%
-          );
-          backdrop-filter: blur(12px);
-          border-top: 2px solid transparent;
-          border-bottom: 2px solid transparent;
-          border-image: linear-gradient(90deg, #38BDF8 0%, #4ADE80 25%, #FACC15 50%, #FB923C 75%, #C084FC 100%) 1;
-          padding: 24px 0;
-          box-shadow: 0 10px 28px -10px rgba(18, 51, 40, 0.12);
+          background: #f8eebd;
+          padding: 22px 0;
+          position: relative;
         }
         .trust-strip__row {
           display: flex;
           justify-content: space-between;
+          align-items: center;
           flex-wrap: wrap;
-          gap: 20px;
+          gap: 16px;
         }
         .trust-strip__item {
           display: flex;
           align-items: center;
           gap: 12px;
-          font-weight: 700;
-          font-size: 0.95rem;
+          font-weight: 800;
+          font-size: 0.92rem;
           color: var(--green-deep-ink);
-          background: rgba(255, 255, 255, 0.8);
+          background: rgba(255, 255, 255, 0.9);
           padding: 8px 18px 8px 10px;
           border-radius: 100px;
-          box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.8);
-          transition: transform 0.22s ease, box-shadow 0.22s ease;
+          box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.1);
+          border: 1.5px solid rgba(255, 255, 255, 0.9);
+          transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease;
+          flex-shrink: 0;
         }
         .trust-strip__item:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 10px 22px -8px rgba(0, 0, 0, 0.14);
+          transform: translateY(-4px) scale(1.03);
+          box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.18);
         }
         .trust-strip__icon {
           width: 42px;
@@ -67,29 +58,49 @@ export default function TrustStrip() {
           display: grid;
           place-items: center;
           border-radius: 50%;
-          font-size: 1.2rem;
+          font-size: 1.25rem;
           box-shadow: 0 4px 10px -3px rgba(0, 0, 0, 0.15);
         }
         .trust-strip__icon--blue {
-          background: linear-gradient(135deg, #BAE6FD 0%, #38BDF8 100%);
+          background: #d9caf0;
         }
         .trust-strip__icon--gold {
-          background: linear-gradient(135deg, #FEF08A 0%, #FACC15 100%);
+          background: var(--gold);
         }
         .trust-strip__icon--green {
-          background: linear-gradient(135deg, #BBF7D0 0%, #4ADE80 100%);
+          background: #e8ddf7;
         }
         .trust-strip__icon--coral {
-          background: linear-gradient(135deg, #FED7AA 0%, #FB923C 100%);
+          background: #f2c45b;
         }
         .trust-strip__icon--purple {
-          background: linear-gradient(135deg, #E9D5FF 0%, #C084FC 100%);
+          background: #d8c5ee;
         }
 
-        @media (max-width: 860px) {
+        @media (max-width: 900px) {
+          .trust-strip {
+            padding: 16px 0;
+          }
           .trust-strip__row {
-            justify-content: center;
-            gap: 14px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            padding: 4px 20px 8px;
+            justify-content: flex-start;
+            gap: 12px;
+          }
+          .trust-strip__row::-webkit-scrollbar {
+            display: none;
+          }
+          .trust-strip__item {
+            font-size: 0.86rem;
+            padding: 6px 14px 6px 8px;
+          }
+          .trust-strip__icon {
+            width: 36px;
+            height: 36px;
+            font-size: 1.1rem;
           }
         }
       `}</style>

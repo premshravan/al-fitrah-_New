@@ -1,9 +1,19 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { SCHOOL } from '../data/schoolInfo'
+import CurvedWave from './CurvedWave'
 
 export default function Footer() {
+  const { pathname } = useLocation()
+  // Determine background of the section directly above the footer
+  const prevBg = ['/contact', '/privacy-policy', '/terms'].includes(pathname)
+    ? 'ivory'
+    : pathname === '/admissions'
+    ? 'tinted'
+    : 'gold'
+
   return (
     <footer className="footer">
+      <CurvedWave color="deep" bg={prevBg} showStroke={false} className="footer__wave" />
       <div className="container footer__grid">
         <div className="footer__brand">
           <Link to="/" className="footer__logo-wrap" aria-label="Al-Fitrah Islamic Preschool">
@@ -89,9 +99,26 @@ export default function Footer() {
 
       <style>{`
         .footer {
+          position: relative;
           background: var(--green-deep);
           color: var(--ivory);
-          padding: 64px 0 0;
+          padding: 0 0 0;
+          border: none;
+          outline: none;
+        }
+        .footer__wave {
+          position: relative;
+          z-index: 3;
+          border: none;
+          outline: none;
+        }
+        .footer__grid {
+          padding-top: 56px;
+        }
+        .footer__grid,
+        .footer__bottom {
+          position: relative;
+          z-index: 1;
         }
         .footer__grid {
           display: grid;
@@ -162,6 +189,7 @@ export default function Footer() {
           .footer__grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 560px) {
+          .footer { padding-top: 112px; }
           .footer__grid { grid-template-columns: 1fr; }
         }
       `}</style>

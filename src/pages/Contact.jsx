@@ -124,7 +124,7 @@ export default function Contact() {
 
       <style>{`
         .contact-section {
-          padding-top: 16px;
+          padding-top: 48px;
         }
         .contact-cards-grid {
           display: grid;
@@ -145,14 +145,9 @@ export default function Contact() {
           transform: translateY(-4px);
           box-shadow: 0 22px 48px -18px rgba(18, 51, 40, 0.22), 0 0 0 1px rgba(240, 178, 58, 0.35);
         }
-        .contact-card--primary {
-          border-top: 4px solid var(--gold);
-        }
-        .contact-card--secondary {
-          border-top: 4px solid var(--leaf);
-        }
+        .contact-card--primary {}
+        .contact-card--secondary {}
         .contact-card--info {
-          border-top: 4px solid var(--green-deep);
           gap: 24px;
         }
 
@@ -214,7 +209,7 @@ export default function Contact() {
           font-size: 0.92rem;
         }
         .contact-card__btn--wa {
-          background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+          background: #25D366;
           color: #ffffff;
           box-shadow: 0 8px 20px -8px rgba(18, 140, 126, 0.7);
         }
@@ -269,7 +264,7 @@ export default function Contact() {
 
         .contact-visit-banner {
           margin-top: 48px;
-          background: linear-gradient(135deg, var(--green-deep) 0%, #123328 100%);
+          background: var(--green-deep-ink);
           color: var(--ivory);
           border-radius: var(--radius-card);
           padding: 42px 48px;

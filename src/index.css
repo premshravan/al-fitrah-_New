@@ -1,45 +1,42 @@
 /* =========================================================
    AL-FITRAH ISLAMIC PRESCHOOL — DESIGN SYSTEM & TOKENS
-   Concept: "Joyful Bloom & Playful Gradients" — designed specifically
-   for young children with soft sky blues, sunny honey yellows,
-   meadow greens, coral apricots, and soft lilacs.
+  Concept: "Purple & Sun" — a confident plum anchor with marigold,
+  soft lilac, and warm cream accents for a joyful preschool rhythm.
    ========================================================= */
 
 :root {
   /* Color Palette */
-  --green-deep: #164836;       /* Deep Islamic Green */
-  --green-deep-ink: #0E2E23;   /* Rich dark emerald for text on light */
-  --green-emerald: #1B5944;    /* Mid-tone vibrant emerald */
-  --leaf: #5EA039;             /* Fresh botanical lime / leaf green */
-  --leaf-light: #EBF5E4;       /* Soft tint */
-  --gold: #F0B23A;             /* Warm golden amber */
-  --gold-light: #FFF4D8;       /* Gold soft tint */
-  --gold-deep: #C7860B;        /* Deep gold for borders / text */
-  --apricot: #F2884B;          /* Sunset orange */
-  --apricot-glow: rgba(242, 136, 75, 0.45);
-  --clay-red: #C4483C;         /* Warm terracotta */
-  --ivory: #EDE4D4;            /* Rich warm cream ivory background */
-  --ivory-deep: #E4D7C2;       /* Secondary warm golden sand cream band */
-  --ivory-warm: #D8C7AC;       /* Deep warm sand accent */
-  --ink: #1F2721;              /* Deep charcoal / dark green text */
-  --ink-soft: #48544B;         /* Muted secondary body copy */
-  --ink-light: #738076;        /* Subtle meta copy */
+  --green-deep: #55317a;       /* Plum brand anchor */
+  --green-deep-ink: #302047;   /* Deep purple text */
+  --green-emerald: #7652a8;    /* Bright learning purple */
+  --leaf: #8a65b5;             /* Soft purple accent */
+  --leaf-light: #eee5fb;       /* Soft lilac tint */
+  --gold: #f6c945;             /* Sunlit yellow */
+  --gold-light: #fff2b8;       /* Soft yellow tint */
+  --gold-deep: #aa7412;        /* Readable golden accent */
+  --apricot: #e59b2f;          /* Warm yellow-orange action accent */
+  --apricot-glow: rgba(229, 155, 47, 0.4);
+  --clay-red: #b86d22;         /* Warm amber accent */
+  --ivory: #fffaf0;            /* Warm paper background */
+  --ivory-deep: #fff0c2;       /* Secondary cream band */
+  --ivory-warm: #f7d978;       /* Deep warm accent */
+  --ink: #342649;              /* Deep readable body text */
+  --ink-soft: #665875;         /* Muted secondary body copy */
+  --ink-light: #9183a0;        /* Subtle meta copy */
   --white: #FFFFFF;
 
-  /* Preschool Joyful Gradients */
-  --grad-sky: linear-gradient(135deg, #BAE6FD 0%, #38BDF8 100%);
-  --grad-mint: linear-gradient(135deg, #BBF7D0 0%, #4ADE80 100%);
-  --grad-sun: linear-gradient(135deg, #FEF08A 0%, #FACC15 100%);
-  --grad-peach: linear-gradient(135deg, #FED7AA 0%, #FB923C 100%);
-  --grad-lilac: linear-gradient(135deg, #E9D5FF 0%, #C084FC 100%);
-  --grad-rainbow: linear-gradient(90deg, #38BDF8 0%, #4ADE80 25%, #FACC15 50%, #FB923C 75%, #C084FC 100%);
-
-  /* Rich Brand Gradients */
-  --grad-emerald: linear-gradient(135deg, #0D3225 0%, #164836 50%, #23664F 100%);
-  --grad-emerald-subtle: linear-gradient(180deg, #164836 0%, #0E2E23 100%);
-  --grad-gold: linear-gradient(135deg, #FFE082 0%, #F0B23A 50%, #D48B09 100%);
-  --grad-apricot: linear-gradient(135deg, #FF9E64 0%, #F2884B 50%, #E25D18 100%);
-  --grad-sunset: linear-gradient(135deg, #F0B23A 0%, #F2884B 100%);
+  /* Solid brand surfaces */
+  --grad-sky: #d9caf0;
+  --grad-mint: #e8ddf7;
+  --grad-sun: #f6c945;
+  --grad-peach: #f2c45b;
+  --grad-lilac: #d8c5ee;
+  --grad-rainbow: #7652a8;
+  --grad-emerald: #55317a;
+  --grad-emerald-subtle: #432460;
+  --grad-gold: #f66e45;
+  --grad-apricot: #e59b2f;
+  --grad-sunset: #d98c26;
 
   /* Shadows */
   --shadow-sm: 0 4px 12px -4px rgba(18, 51, 40, 0.08);
@@ -50,14 +47,14 @@
   --shadow-glow-emerald: 0 14px 32px -10px rgba(18, 51, 40, 0.5);
 
   /* Typography */
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Fredoka', 'Trebuchet MS', sans-serif;
+  --font-body: 'Nunito', 'Trebuchet MS', sans-serif;
 
   /* Layout */
   --max-width: 1200px;
   --radius-organic: 42% 58% 63% 37% / 41% 44% 56% 59%;
-  --radius-card: 22px;
-  --radius-soft: 12px;
+  --radius-card: 26px;
+  --radius-soft: 16px;
 }
 
 * {
@@ -80,24 +77,21 @@ html {
   }
 }
 
-/* Multi-color ambient gradient background for the entire kids website */
+/* Warm ivory background shared by the interior pages and home sections */
 body {
   margin: 0;
+  overflow-x: hidden;
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.62;
   -webkit-font-smoothing: antialiased;
-  background-color: #EAE1D2;
+  background-color: var(--ivory);
   background-image:
-    radial-gradient(1100px circle at 8% 6%, rgba(56, 189, 248, 0.28) 0%, transparent 55%),
-    radial-gradient(1000px circle at 92% 10%, rgba(245, 175, 35, 0.30) 0%, transparent 52%),
-    radial-gradient(1150px circle at 15% 32%, rgba(242, 136, 75, 0.28) 0%, transparent 55%),
-    radial-gradient(1200px circle at 88% 46%, rgba(74, 222, 128, 0.28) 0%, transparent 55%),
-    radial-gradient(1050px circle at 10% 64%, rgba(192, 132, 252, 0.26) 0%, transparent 52%),
-    radial-gradient(1100px circle at 85% 78%, rgba(245, 158, 11, 0.30) 0%, transparent 55%),
-    radial-gradient(950px circle at 25% 94%, rgba(56, 189, 248, 0.26) 0%, transparent 50%),
-    linear-gradient(180deg, #E9DFD0 0%, #DAECF7 18%, #F2E8CA 36%, #D2EED7 54%, #E9DAF7 72%, #F3DEC7 100%);
+    radial-gradient(circle at 8% 4%, rgba(216, 197, 238, 0.28) 0, transparent 32%),
+    radial-gradient(circle at 94% 18%, rgba(246, 201, 69, 0.2) 0, transparent 34%),
+    radial-gradient(circle at 12% 82%, rgba(238, 229, 251, 0.7) 0, transparent 36%),
+    linear-gradient(180deg, #fffaf0 0%, #fffdf8 38%, #f7f0fc 72%, #fffaf0 100%);
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
@@ -124,7 +118,7 @@ h1, h2, h3, h4 {
   line-height: 1.14;
   margin: 0;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 p {
@@ -153,38 +147,86 @@ ul {
   font-weight: 700;
   font-size: 0.82rem;
   color: var(--leaf);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
 .section {
-  padding: 92px 0;
+  padding: 72px 0;
   position: relative;
+}
+
+/* =========================================================
+   CURVED WAVE BOUNDARY SYSTEM
+   Responsive SVG wave design matching brand aesthetics.
+   Scalable across mobile, tablet, and desktop with zero content overlap.
+   ========================================================= */
+
+.curved-wave-wrap {
+  width: 100%;
+  display: block;
+  line-height: 0;
+  font-size: 0;
+  position: relative;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  border: none;
+  outline: none;
+  transform: translateZ(0);
+}
+
+.curved-wave-svg {
+  width: 100%;
+  height: clamp(38px, 5.6vw, 82px);
+  display: block;
+  vertical-align: bottom;
+  overflow: hidden;
+  border: none;
+  outline: none;
 }
 
 @media (max-width: 767px) {
   .section {
-    padding: 60px 0;
+    padding: 48px 0;
+  }
+  .curved-wave-svg {
+    height: clamp(32px, 7vw, 48px);
   }
 }
 
-/* Translucent frosted glass tint allowing multi-color background to shine through */
+
+/* Soft translucent lilac section surface */
 .section--tinted {
-  background: linear-gradient(
-    135deg,
-    rgba(247, 239, 222, 0.82) 0%,
-    rgba(224, 240, 252, 0.78) 45%,
-    rgba(222, 247, 230, 0.82) 100%
-  );
+  background: rgba(78, 54, 104, 0.92);
+  color: var(--ivory);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-top: 1px solid rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid rgba(22, 72, 54, 0.08);
   position: relative;
+}
+.section--tinted h2, .section--tinted h3, .section--tinted h4 {
+  color: var(--ivory);
+}
+.section--tinted [class*="__card"] h2,
+.section--tinted [class*="__card"] h3,
+.section--tinted [class*="__card"] h4,
+.section--tinted .card-premium h2,
+.section--tinted .card-premium h3,
+.section--tinted .card-premium h4 {
+  color: var(--green-deep-ink);
+}
+.section--tinted [class*="__card"] p,
+.section--tinted .card-premium p {
+  color: var(--ink-soft);
+}
+.section--tinted .eyebrow {
+  color: var(--gold);
 }
 
 .section--deep {
-  background: var(--grad-emerald);
+  background: var(--green-deep);
   color: var(--ivory);
   position: relative;
   overflow: hidden;
@@ -195,7 +237,7 @@ ul {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(240, 178, 58, 0.12) 0%, transparent 70%);
+  background: rgba(246, 201, 69, 0.12);
   top: -200px;
   right: -100px;
   pointer-events: none;
@@ -206,7 +248,7 @@ ul {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.14) 0%, transparent 70%);
+  background: rgba(216, 197, 238, 0.14);
   bottom: -150px;
   left: -80px;
   pointer-events: none;
@@ -221,7 +263,7 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.98rem;
   padding: 14px 28px;
   border-radius: 100px;
@@ -240,16 +282,16 @@ ul {
 }
 
 .btn-primary {
-  background: var(--grad-apricot);
+  background: var(--apricot);
   color: var(--white);
   box-shadow: var(--shadow-glow-coral);
 }
 .btn-primary:hover {
-  box-shadow: 0 16px 36px -8px rgba(242, 136, 75, 0.85);
+  box-shadow: 0 16px 36px -8px rgba(39, 34, 31, 0.85);
 }
 
 .btn-secondary {
-  background: var(--grad-emerald);
+  background: var(--green-deep);
   color: var(--ivory);
   box-shadow: var(--shadow-glow-emerald);
 }
@@ -258,11 +300,12 @@ ul {
 }
 
 .btn-gold {
-  background: var(--grad-gold);
+  background: var(--gold);
   color: var(--green-deep-ink);
   box-shadow: var(--shadow-glow-gold);
 }
 .btn-gold:hover {
+  color: #000000;
   box-shadow: 0 16px 36px -8px rgba(240, 178, 58, 0.75);
 }
 
@@ -290,9 +333,9 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--grad-gold);
+  background: var(--gold);
   color: var(--green-deep-ink);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.78rem;
   padding: 6px 16px;
   border-radius: 100px;
@@ -333,11 +376,11 @@ ul {
 
 /* Premium Card Primitives */
 .card-premium {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(140, 128, 63, 0.96);
   backdrop-filter: blur(14px);
   border-radius: var(--radius-card);
   box-shadow: 0 14px 34px -10px rgba(18, 51, 40, 0.12), 0 2px 8px 0 rgba(18, 51, 40, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(255, 200, 61, 0.22);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
   overflow: hidden;
 }
@@ -346,24 +389,102 @@ ul {
   box-shadow: var(--shadow-card-hover);
 }
 
-/* Text Gradients */
+/* Accent text */
 .text-gradient-gold {
-  background: var(--grad-gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--gold-deep);
 }
 .text-gradient-emerald {
-  background: var(--grad-emerald);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--green-deep);
 }
 .text-gradient-coral {
-  background: var(--grad-apricot);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--apricot);
 }
 .text-gradient-rainbow {
-  background: var(--grad-rainbow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--green-deep);
+}
+
+/* =========================================================
+   PLAYFUL MICRO-DELIGHTS & FLOATING ANIMATIONS
+   Kid-friendly warmth & parent-trust aesthetic
+   ========================================================= */
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(8px) rotate(-2deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.08); opacity: 1; filter: drop-shadow(0 0 12px rgba(246, 201, 69, 0.6)); }
+}
+
+@keyframes twinkleStar {
+  0%, 100% { transform: scale(0.8) rotate(0deg); opacity: 0.5; }
+  50% { transform: scale(1.2) rotate(45deg); opacity: 1; }
+}
+
+.floating-doodle {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 2;
+  will-change: transform;
+}
+.floating-doodle--1 { animation: floatSlow 5.5s ease-in-out infinite; }
+.floating-doodle--2 { animation: floatReverse 6.5s ease-in-out infinite 1s; }
+.floating-doodle--3 { animation: floatSlow 7s ease-in-out infinite 2s; }
+.floating-doodle--twinkle { animation: twinkleStar 3s ease-in-out infinite; }
+
+/* Playful Sticker Badges */
+.sticker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 14px -3px rgba(0, 0, 0, 0.15);
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.sticker-badge:hover {
+  transform: translateY(-2px) scale(1.04);
+}
+.sticker-badge--gold {
+  background: var(--gold);
+  color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.sticker-badge--purple {
+  background: #eee5fb;
+  color: var(--green-deep-ink);
+  border: 1px solid rgba(118, 82, 168, 0.2);
+}
+.sticker-badge--mint {
+  background: #e6f9f0;
+  color: #125738;
+  border: 1px solid rgba(46, 175, 114, 0.25);
+}
+
+/* Pulse Live Dot */
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: livePulse 2s infinite;
+  display: inline-block;
+}
+
+@keyframes livePulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
 }

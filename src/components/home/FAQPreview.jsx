@@ -4,7 +4,7 @@ import { FAQS } from '../../data/faqs'
 
 export default function FAQPreview() {
   return (
-    <section className="section section--tinted faq-preview">
+    <section className="section faq-preview">
       <div className="container faq-preview__grid">
         <div className="faq-preview__intro">
           <div className="leaf-divider"><LeafIcon /><span className="eyebrow">Common Questions</span></div>

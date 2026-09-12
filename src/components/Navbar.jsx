@@ -13,8 +13,24 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    setOpen(false)
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setOpen(false)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
+
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
 
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
@@ -27,19 +43,43 @@ export default function Navbar() {
           />
         </Link>
 
+        {/* Backdrop overlay on mobile */}
+        <div
+          className={`navbar__backdrop ${open ? 'is-open' : ''}`}
+          onClick={() => setOpen(false)}
+          aria-hidden="true"
+        />
+
         <nav className={`navbar__links ${open ? 'is-open' : ''}`} aria-label="Primary">
-          {NAV_LINKS.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              end={link.to === '/'}
-              className={({ isActive }) => `navbar__link ${isActive ? 'is-active' : ''}`}
+          <div className="navbar__menu-header">
+            <span className="navbar__menu-title">Al-Fitrah</span>
+            <button
+              className="navbar__close-btn"
               onClick={() => setOpen(false)}
+              aria-label="Close menu"
             >
-              {link.label}
-            </NavLink>
-          ))}
-          <Link to="/admissions" className="btn btn-primary navbar__cta" onClick={() => setOpen(false)}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+
+          <div className="navbar__menu-items">
+            {NAV_LINKS.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.to === '/'}
+                className={({ isActive }) => `navbar__link ${isActive ? 'is-active' : ''}`}
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </div>
+
+          <Link to="/admissions" className="btn btn-gold navbar__cta" onClick={() => setOpen(false)}>
             Enquire Now
           </Link>
         </nav>
@@ -61,11 +101,9 @@ export default function Navbar() {
           position: sticky;
           top: 0;
           z-index: 60;
-          background: rgba(255, 255, 255, 0.92);
+          background: rgba(255, 253, 242, 0.94);
           backdrop-filter: blur(14px);
           -webkit-backdrop-filter: blur(14px);
-          border-bottom: 2.5px solid transparent;
-          border-image: linear-gradient(90deg, #38BDF8 0%, #4ADE80 25%, #FACC15 50%, #FB923C 75%, #C084FC 100%) 1;
           transition: box-shadow 0.2s ease;
         }
         .navbar--scrolled {
@@ -97,11 +135,22 @@ export default function Navbar() {
         .navbar__links {
           display: flex;
           align-items: center;
-          gap: 26px;
+          gap: 22px;
+        }
+        .navbar__menu-header {
+          display: none;
+        }
+        .navbar__menu-items {
+          display: flex;
+          align-items: center;
+          gap: 22px;
+        }
+        .navbar__backdrop {
+          display: none;
         }
         .navbar__link {
           font-size: 0.94rem;
-          font-weight: 600;
+          font-weight: 800;
           color: var(--ink-soft);
           padding: 6px 2px;
           border-bottom: 2px solid transparent;
@@ -111,7 +160,14 @@ export default function Navbar() {
           color: var(--green-deep-ink);
           border-bottom-color: var(--gold);
         }
-        .navbar__cta { padding: 10px 22px; font-size: 0.9rem; }
+        .navbar__cta {
+          padding: 10px 22px;
+          font-size: 0.9rem;
+          transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .navbar__cta:hover {
+          color: #000000 !important;
+        }
         .navbar__toggle {
           display: none;
           flex-direction: column;
@@ -130,27 +186,150 @@ export default function Navbar() {
 
         @media (max-width: 900px) {
           .navbar__toggle { display: flex; }
+
+          .navbar__backdrop {
+            display: block;
+            position: fixed;
+            inset: 0;
+            background: rgba(22, 10, 36, 0.65);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 65;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+          }
+          .navbar__backdrop.is-open {
+            opacity: 1;
+            pointer-events: auto;
+          }
+
           .navbar__links {
             position: fixed;
-            inset: 0 0 0 auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
             height: 100vh;
-            width: min(320px, 82vw);
-            background: var(--ivory);
+            height: 100dvh;
+            width: min(250px, 68vw);
+            max-width: 260px;
+            z-index: 70;
+            background: linear-gradient(165deg, #2c1247 0%, #462270 42%, #582e85 75%, #351554 100%);
+            border-left: 1.5px solid rgba(246, 201, 69, 0.35);
             flex-direction: column;
-            align-items: flex-start;
-            padding: 100px 28px 28px;
-            gap: 22px;
+            align-items: stretch;
+            padding: 18px 18px 24px;
+            gap: 16px;
             transform: translateX(100%);
-            transition: transform 0.25s ease;
-            box-shadow: -12px 0 30px -20px rgba(0,0,0,0.4);
+            transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+            box-shadow: -12px 0 35px -8px rgba(18, 5, 30, 0.7);
+            overflow-y: auto;
+          }
+
+          .navbar__links::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(246, 201, 69, 0.22) 0%, transparent 70%);
+            pointer-events: none;
+          }
+
+          .navbar__links::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(246, 110, 69, 0.18) 0%, transparent 70%);
+            pointer-events: none;
+          }
+
+          .navbar__menu-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(246, 201, 69, 0.22);
+            position: relative;
+            z-index: 2;
+          }
+          .navbar__menu-title {
+            font-family: var(--font-display);
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.02em;
+          }
+          .navbar__close-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(246, 201, 69, 0.14);
+            border: 1px solid rgba(246, 201, 69, 0.35);
+            color: var(--gold);
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+            padding: 0;
+          }
+          .navbar__close-btn svg {
+            width: 16px;
+            height: 16px;
+          }
+          .navbar__close-btn:hover,
+          .navbar__close-btn:active {
+            background: var(--gold);
+            color: var(--green-deep-ink);
+            transform: scale(1.08);
+          }
+
+          .navbar__menu-items {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 6px;
+            position: relative;
+            z-index: 2;
+          }
+
+          .navbar__links .navbar__link {
+            color: rgba(255, 249, 233, 0.9);
+            border-bottom: none;
+            padding: 9px 12px;
+            font-size: 0.92rem;
+            border-radius: 10px;
+            transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+          }
+          .navbar__links .navbar__link.is-active,
+          .navbar__links .navbar__link:hover {
+            color: var(--gold);
+            background: rgba(246, 201, 69, 0.15);
+            transform: translateX(3px);
           }
           .navbar__links.is-open { transform: translateX(0); }
-          .navbar__cta { margin-top: 10px; }
+          .navbar__links .navbar__cta {
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 20px -4px rgba(246, 201, 69, 0.45);
+          }
           .navbar__logo {
             height: 48px;
             max-width: 160px;
           }
         }
+
         @media (max-width: 480px) {
           .navbar__logo {
             height: 42px;

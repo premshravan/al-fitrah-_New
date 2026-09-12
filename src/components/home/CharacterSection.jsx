@@ -6,10 +6,10 @@ export default function CharacterSection() {
   return (
     <section className="section character">
       <div className="container character__grid">
-        <div className="character__visual blob">
+        <div className="character__visual character__visual--framed blob">
           <img
-            src="/images/brochure-events.jpg"
-            alt="Al-Fitrah preschool children in costumed classroom activities and celebrations"
+            src="/images/galleries/photo_2026-09-09_12-53-42.jpg"
+            alt="Al-Fitrah preschool children performing together in colorful costumes"
           />
         </div>
 
@@ -38,6 +38,12 @@ export default function CharacterSection() {
           align-items: center;
         }
         .character__visual { aspect-ratio: 4/5; box-shadow: var(--shadow-soft); }
+        .character__visual--framed {
+          border-radius: 58% 42% 36% 64% / 34% 30% 70% 66%;
+          border: 9px solid rgba(255, 255, 255, 0.72);
+          box-shadow: 0 22px 46px -18px rgba(18, 51, 40, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.7);
+          transform: rotate(-2deg);
+        }
         .character__visual img { width: 100%; height: 100%; object-fit: cover; }
         .character__copy h2 { font-size: clamp(1.9rem, 3vw, 2.4rem); margin-top: 10px; max-width: 16ch; }
         .character__copy p { margin-top: 18px; color: var(--ink-soft); font-size: 1.02rem; max-width: 52ch; }

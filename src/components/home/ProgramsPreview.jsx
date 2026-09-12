@@ -32,7 +32,7 @@ export default function ProgramsPreview() {
       <style>{`
         .programs-preview__head { max-width: 640px; margin-bottom: 40px; }
         .programs-preview__head h2 { font-size: clamp(1.9rem, 3vw, 2.4rem); margin-top: 10px; }
-        .programs-preview__head p { margin-top: 12px; color: var(--ink-soft); font-size: 0.94rem; }
+        .programs-preview__head p { margin-top: 12px; color: rgba(255, 250, 240, 0.86); font-size: 0.94rem; }
         .programs-preview__grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -43,9 +43,19 @@ export default function ProgramsPreview() {
           border-radius: var(--radius-card);
           padding: 28px;
           border: 1px solid rgba(27,75,58,0.08);
+          box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.12);
         }
-        .programs-preview__card h3 { margin-top: 14px; font-size: 1.2rem; }
-        .programs-preview__card p { margin-top: 10px; color: var(--ink-soft); font-size: 0.94rem; }
+        .programs-preview__card h3 {
+          margin-top: 14px;
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: var(--green-deep-ink) !important;
+        }
+        .programs-preview__card p {
+          margin-top: 10px;
+          color: var(--ink-soft) !important;
+          font-size: 0.94rem;
+        }
         .programs-preview__cta { margin-top: 36px; }
 
         @media (max-width: 800px) {
