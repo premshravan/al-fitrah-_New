@@ -214,7 +214,7 @@ export default function Navbar() {
             width: min(250px, 68vw);
             max-width: 260px;
             z-index: 70;
-            background: linear-gradient(165deg, #2c1247 0%, #462270 42%, #582e85 75%, #351554 100%);
+            background: linear-gradient(165deg, #211131 0%, #32194b 42%, #432461 75%, #26143b 100%);
             border-left: 1.5px solid rgba(246, 201, 69, 0.35);
             flex-direction: column;
             align-items: stretch;

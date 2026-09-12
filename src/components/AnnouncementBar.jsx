@@ -57,7 +57,29 @@ export default function AnnouncementBar() {
           transform: translateY(-1px);
         }
         @media (max-width: 560px) {
-          .announcement__row { justify-content: center; text-align: center; }
+          .announcement__row {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            text-align: center;
+            gap: 7px;
+            padding: 8px 16px 10px;
+          }
+          .announcement__links {
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px 10px;
+            line-height: 1.35;
+          }
+          .announcement__links a {
+            white-space: nowrap;
+          }
+          .announcement__cta {
+            flex-basis: 100%;
+            width: min(100%, 260px);
+            padding: 6px 14px;
+          }
         }
       `}</style>
     </div>
