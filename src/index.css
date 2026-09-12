@@ -5,6 +5,8 @@
    ========================================================= */
 
 :root {
+  color-scheme: light;
+
   /* Color Palette */
   --green-deep: #55317a;       /* Plum brand anchor */
   --green-deep-ink: #302047;   /* Deep purple text */
@@ -92,7 +94,7 @@ body {
     radial-gradient(circle at 94% 18%, rgba(246, 201, 69, 0.2) 0, transparent 34%),
     radial-gradient(circle at 12% 82%, rgba(238, 229, 251, 0.7) 0, transparent 36%),
     linear-gradient(180deg, #fffaf0 0%, #fffdf8 38%, #f7f0fc 72%, #fffaf0 100%);
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   min-height: 100vh;
 }
