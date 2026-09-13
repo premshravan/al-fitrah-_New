@@ -497,7 +497,12 @@ export default function Gallery() {
           }
           .gallery-card__overlay {
             opacity: 1;
-            background: rgba(48, 32, 71, 0.82);
+            background: linear-gradient(
+              180deg,
+              rgba(48, 32, 71, 0) 28%,
+              rgba(48, 32, 71, 0.12) 48%,
+              rgba(48, 32, 71, 0.86) 100%
+            );
             padding: 12px;
           }
           .gallery-card__title {

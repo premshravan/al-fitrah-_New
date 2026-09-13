@@ -55,19 +55,6 @@ export default function FloatingWhatsApp() {
           gap: 12px;
           isolation: isolate;
         }
-        .floating-wa::before {
-          content: '';
-          position: absolute;
-          z-index: -1;
-          width: 86px;
-          height: 86px;
-          right: -14px;
-          top: -14px;
-          border-radius: 50%;
-          background: linear-gradient(145deg, rgba(255, 250, 240, 0.96), rgba(246, 201, 69, 0.6));
-          box-shadow: 0 10px 28px -8px rgba(38, 23, 55, 0.42);
-          opacity: 0.95;
-        }
         .floating-wa__btn {
           position: relative;
           display: grid;
@@ -77,7 +64,7 @@ export default function FloatingWhatsApp() {
           background: linear-gradient(145deg, #42ed83 0%, #18b967 58%, #0d9854 100%);
           color: #ffffff;
           border-radius: 50%;
-          border: 3px solid #fffaf0;
+          border: none;
           box-shadow: 0 12px 28px -6px rgba(18, 140, 126, 0.55), 0 0 0 2px rgba(37, 211, 102, 0.28);
           transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
           text-decoration: none;
@@ -154,12 +141,6 @@ export default function FloatingWhatsApp() {
           .floating-wa {
             bottom: 84px;
             right: 18px;
-          }
-          .floating-wa::before {
-            width: 78px;
-            height: 78px;
-            right: -13px;
-            top: -13px;
           }
           .floating-wa__btn {
             width: 52px;

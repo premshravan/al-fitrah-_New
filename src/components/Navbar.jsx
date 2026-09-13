@@ -122,7 +122,7 @@ export default function Navbar() {
           text-decoration: none;
         }
         .navbar__logo {
-          height: 64px;
+          height: 72px;
           width: auto;
           max-width: 210px;
           object-fit: contain;
@@ -325,14 +325,14 @@ export default function Navbar() {
             box-shadow: 0 8px 20px -4px rgba(246, 201, 69, 0.45);
           }
           .navbar__logo {
-            height: 48px;
+            height: 56px;
             max-width: 160px;
           }
         }
 
         @media (max-width: 480px) {
           .navbar__logo {
-            height: 42px;
+            height: 48px;
             max-width: 140px;
           }
         }

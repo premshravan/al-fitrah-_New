@@ -76,7 +76,15 @@ export default function Admissions() {
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                💬 WhatsApp Admissions
+                <svg className="admissions-whatsapp-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M12 2C6.48 2 2 6.48 2 12c0 1.88.52 3.65 1.43 5.16L2.35 21.6l4.58-1.06A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18.18c-1.64 0-3.18-.46-4.5-1.27l-.32-.2-2.98.69.7-2.9-.22-.34A8.15 8.15 0 0 1 3.82 12c0-4.51 3.67-8.18 8.18-8.18s8.18 3.67 8.18 8.18-3.67 8.18-8.18 8.18Zm4.85-6.07c-.27-.13-1.58-.78-1.82-.87-.25-.09-.43-.13-.6.13-.18.27-.69.87-.85 1.05-.16.18-.31.2-.58.07-.27-.13-1.13-.41-2.15-1.32-.79-.71-1.33-1.58-1.48-1.85-.16-.27-.02-.41.12-.54.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.04-.33-.02-.47-.07-.13-.6-1.45-.82-1.98-.22-.52-.44-.45-.6-.46-.16-.01-.33-.01-.51-.01-.18 0-.47.07-.71.33-.25.27-.94.92-.94 2.23 0 1.32.96 2.59 1.09 2.76.13.18 1.89 2.88 4.57 4.04.64.28 1.14.44 1.53.56.64.2 1.23.17 1.69.1.51-.08 1.58-.65 1.8-1.27.22-.62.22-1.16.16-1.27-.07-.11-.25-.18-.51-.31Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                WhatsApp Admissions
               </a>
             </div>
           </div>
@@ -238,6 +246,11 @@ export default function Admissions() {
           gap: 12px;
           margin-top: 26px;
           flex-wrap: wrap;
+        }
+        .admissions-whatsapp-icon {
+          width: 1.25em;
+          height: 1.25em;
+          flex: 0 0 auto;
         }
         .sticker-badge--gold {
           background: rgba(218,165,32,0.25);

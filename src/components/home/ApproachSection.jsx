@@ -217,12 +217,33 @@ export default function ApproachSection() {
           font-size: 1.1rem;
         }
         .approach__flow {
-          background: var(--ivory-deep);
+          background:
+            linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent 58%),
+            repeating-linear-gradient(135deg, rgba(67, 36, 97, 0.035) 0 1px, transparent 1px 13px),
+            var(--ivory-deep);
           border-radius: var(--radius-card);
           padding: 32px;
           border: 1px solid rgba(246, 201, 69, 0.3);
+          box-shadow: 0 16px 28px -24px rgba(38, 23, 55, 0.7);
         }
-        .approach__flow-label { font-weight: 800; margin-bottom: 18px; color: var(--green-deep-ink); }
+        .approach__flow-label {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 0.82rem;
+          font-weight: 900;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          margin-bottom: 22px;
+          color: var(--green-deep-ink);
+        }
+        .approach__flow-label::before {
+          content: '';
+          width: 28px;
+          height: 3px;
+          border-radius: 3px;
+          background: var(--gold);
+        }
         .approach__cta { margin-top: 40px; }
 
         @media (max-width: 900px) {
@@ -239,6 +260,9 @@ export default function ApproachSection() {
             flex-shrink: 0;
           }
           .approach__body { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 560px) {
+          .approach__flow { padding: 22px 18px; }
         }
       `}</style>
     </section>

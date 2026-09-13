@@ -67,15 +67,28 @@ export default function OurApproach() {
         .approach-flow-section {
           padding-top: clamp(32px, 5vw, 56px);
           padding-bottom: clamp(32px, 5vw, 56px);
+          background:
+            linear-gradient(180deg, rgba(255, 250, 240, 0.3), rgba(238, 229, 251, 0.38)),
+            repeating-linear-gradient(90deg, rgba(67, 36, 97, 0.025) 0 1px, transparent 1px 42px);
         }
         .approach-flow__heading {
           text-align: center;
-          margin-bottom: 32px;
+          margin: 0 auto 36px;
+          max-width: 680px;
         }
         .approach-flow__heading h2 {
           margin-top: 10px;
           font-size: clamp(1.6rem, 2.5vw, 2.1rem);
           color: var(--green-deep-ink);
+        }
+        .approach-flow__heading h2::after {
+          content: '';
+          display: block;
+          width: 54px;
+          height: 4px;
+          margin: 16px auto 0;
+          border-radius: 4px;
+          background: linear-gradient(90deg, var(--gold), var(--apricot));
         }
         .approach-principles__header {
           text-align: center;
