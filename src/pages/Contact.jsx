@@ -89,7 +89,7 @@ export default function Contact() {
 
               <div className="contact-info-block">
                 <span className="contact-info-label">School Timings</span>
-                <p><strong>Monday – Friday:</strong> 9:00 AM – 3:30 PM</p>
+                <p><strong>{SCHOOL.timings}</strong></p>
                 <p className="contact-info-sub">Office hours available for parent visits &amp; campus tours.</p>
               </div>
 

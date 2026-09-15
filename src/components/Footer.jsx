@@ -25,8 +25,24 @@ export default function Footer() {
           </Link>
           <p>Where young minds learn, grow &amp; bloom — Quranic learning, academic foundations, Islamic values and character development in {SCHOOL.locality}.</p>
           <div className="footer__social">
-            <a href={SCHOOL.instagram} aria-label="Instagram">Instagram</a>
-            <a href={SCHOOL.facebook} aria-label="Facebook">Facebook</a>
+            <a
+              href={SCHOOL.instagram}
+              aria-label="Instagram"
+              title="Instagram"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <InstagramIcon />
+            </a>
+            <a
+              href={SCHOOL.facebook}
+              aria-label="Facebook"
+              title="Facebook"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FacebookIcon />
+            </a>
           </div>
         </div>
 
@@ -154,10 +170,39 @@ export default function Footer() {
         }
         .footer__social {
           display: flex;
-          gap: 16px;
+          gap: 10px;
           margin-top: 18px;
-          font-size: 0.86rem;
-          font-weight: 600;
+        }
+        .footer__social a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 38px;
+          height: 38px;
+          color: var(--ivory);
+          border: 1px solid rgba(251, 246, 236, 0.28);
+          border-radius: 10px;
+          transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+        .footer__social a:hover,
+        .footer__social a:focus-visible {
+          transform: translateY(-2px);
+        }
+        .footer__social a:first-child:hover,
+        .footer__social a:first-child:focus-visible {
+          color: #e4405f;
+          background: rgba(228, 64, 95, 0.12);
+          border-color: #e4405f;
+        }
+        .footer__social a:last-child:hover,
+        .footer__social a:last-child:focus-visible {
+          color: #1877f2;
+          background: rgba(24, 119, 242, 0.12);
+          border-color: #1877f2;
+        }
+        .footer__social svg {
+          width: 20px;
+          height: 20px;
         }
         .footer__col h4 {
           color: var(--ivory);
@@ -194,5 +239,23 @@ export default function Footer() {
         }
       `}</style>
     </footer>
+  )
+}
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2" />
+      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+    </svg>
+  )
+}
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3h2.8v8h3.2Z" />
+    </svg>
   )
 }

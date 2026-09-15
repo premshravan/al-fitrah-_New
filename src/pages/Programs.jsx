@@ -5,44 +5,28 @@ import FinalCTA from '../components/FinalCTA'
 
 const PROGRAMS = [
   {
-    name: 'Early Years',
-    age: 'Age 3+',
+    name: 'Beginners',
+    age: 'Age 2.5–3.5',
     icon: '🧸',
     tagClass: 'sticker-badge--mint',
-    focus: 'Settling into school life, sensory play, and first exposure to Quranic sounds and letters.',
-    outcomes: ['Comfort with the classroom routine & gentle ayahs', 'Basic listening and following simple instructions', 'First joyful familiarity with Arabic letter sounds'],
-  },
-  {
-    name: 'Preschool',
-    age: 'Age 4+',
-    icon: '✏️',
-    tagClass: 'sticker-badge--gold',
-    focus: 'Building language, number sense and guided Quran reading practice.',
-    outcomes: ['Growing vocabulary in English & early communication', 'Counting, patterns and early number concepts', 'Reading short Quranic portions with gentle guidance'],
+    focus: 'A gentle first step into school life through secure routines, sensory play, and joyful Quranic discovery.',
+    outcomes: ['Settling happily into classroom routines with loving teacher support', 'Building listening, sharing, self-care, and simple communication skills', 'Recognising first Arabic sounds, letters, colours, shapes, and numbers'],
   },
   {
     name: 'Level 1',
-    age: 'Age 4–5',
-    icon: '🌱',
-    tagClass: 'sticker-badge--purple',
-    focus: 'Strengthening reading, writing readiness and Tajweed basics.',
-    outcomes: ['Letter recognition, phonics and early writing strokes', 'Simple Mathematics & spatial concepts', 'Progressing through foundational Nour Al Bayan stages'],
+    age: 'Age 3.5–4.5',
+    icon: '✏️',
+    tagClass: 'sticker-badge--gold',
+    focus: 'Building confident foundations in language, early mathematics, creativity, and guided Quran reading.',
+    outcomes: ['Developing vocabulary, phonics awareness, pencil control, and early writing', 'Counting, sorting, patterns, and simple problem-solving with confidence', 'Progressing through foundational Nour Al Bayan reading and Tajweed sounds'],
   },
   {
     name: 'Level 2',
-    age: 'Age 5+',
-    icon: '📖',
-    tagClass: 'sticker-badge--mint',
-    focus: 'Consolidating academic skills alongside continued Quran revision.',
-    outcomes: ['Reading short sentences confidently in English & Arabic', 'Applying basic Mathematics operations & reasoning', 'Improved Tajweed application and memorisation revision'],
-  },
-  {
-    name: 'Level 3',
-    age: 'Age 5–6',
-    icon: '🎓',
-    tagClass: 'sticker-badge--gold',
-    focus: 'Preparing for the transition into formal schooling.',
-    outcomes: ['Reading fluency across English, EVS & Islamic studies', 'Confident number work and environmental awareness', 'Multiple revisions of Quranic portions completed with joy'],
+    age: 'Age 4.5–6',
+    icon: '🌱',
+    tagClass: 'sticker-badge--purple',
+    focus: 'Consolidating academic confidence, Quranic fluency, character, and readiness for the next stage of schooling.',
+    outcomes: ['Reading simple sentences, writing independently, and expressing ideas clearly', 'Applying number operations, reasoning, and environmental understanding', 'Strengthening Tajweed, Quran revision, independence, and school-readiness habits'],
   },
 ]
 
@@ -51,7 +35,7 @@ export default function Programs() {
     <>
       <PageMeta
         title="Programs | Al-Fitrah Islamic Preschool Thalassery"
-        description="Explore Al-Fitrah Islamic Preschool's age-based programs in Thalassery — Early Years through Level 3 — combining Quranic education with academic learning."
+        description="Explore Al-Fitrah Islamic Preschool's age-based programs in Thalassery — Beginners through Level 2 — combining Quranic education with academic learning."
       />
       <PageHero
         eyebrow="Programs & Age Groups"

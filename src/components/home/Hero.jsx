@@ -70,8 +70,8 @@ export default function Hero() {
           <div className="hero__visual-glow" />
           <div className="hero__blob blob">
             <img
-              src="/images/galleries/photo_2026-09-09_12-54-19.jpg"
-              alt="Al-Fitrah preschool children celebrating their graduation with teachers"
+              src="/images/galleries/group-image-1.jpg"
+              alt="Al-Fitrah preschool children celebrating graduation with teachers and guests"
             />
           </div>
 
@@ -152,8 +152,8 @@ export default function Hero() {
           position: relative;
           z-index: 2;
           display: grid;
-          grid-template-columns: 1.12fr 0.88fr;
-          gap: 60px;
+          grid-template-columns: 1fr 1fr;
+          gap: 48px;
           align-items: center;
         }
 
@@ -269,6 +269,8 @@ export default function Hero() {
         /* Visual column */
         .hero__visual {
           position: relative;
+          width: 100%;
+          justify-self: end;
         }
         .hero__visual-glow {
           position: absolute;
@@ -281,15 +283,17 @@ export default function Hero() {
         .hero__blob {
           position: relative;
           z-index: 2;
-          aspect-ratio: 4 / 4.7;
-          border-radius: 34% 66% 52% 48% / 24% 28% 72% 76%;
-          border: 10px solid rgba(255, 249, 233, 0.82);
+          aspect-ratio: 16 / 9;
+          border-radius: 28px 72px 28px 72px;
+          border: 8px solid rgba(255, 249, 233, 0.82);
+          overflow: hidden;
           box-shadow: 0 24px 50px -18px rgba(18, 51, 40, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.6);
         }
         .hero__blob img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position: center;
         }
 
         .hero__chip {
@@ -374,12 +378,20 @@ export default function Hero() {
             gap: 48px;
           }
           .hero__visual {
-            max-width: 440px;
+            max-width: 520px;
             margin: 0 auto;
+          }
+          .hero__blob {
+            border-radius: 24px 56px 24px 56px;
           }
         }
         @media (max-width: 520px) {
           .hero { padding: 40px 0 64px; }
+          .hero__blob {
+            aspect-ratio: 4 / 3;
+            border-width: 6px;
+            border-radius: 20px 42px 20px 42px;
+          }
           .hero__chip--one { left: 0; }
           .hero__chip--two { right: 0; }
           .hero__stat-card {

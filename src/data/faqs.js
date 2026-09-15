@@ -45,7 +45,7 @@ export const FAQS = [
   },
   {
     q: 'What are the school timings?',
-    a: '[CONFIRM] School timings will be published here once confirmed by the school.',
+    a: 'The school is open Monday to Friday from 9:00 AM to 2:30 PM.',
   },
   {
     q: 'What are the fees?',

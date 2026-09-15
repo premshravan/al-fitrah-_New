@@ -214,7 +214,10 @@ export default function Navbar() {
             width: min(250px, 68vw);
             max-width: 260px;
             z-index: 70;
-            background: linear-gradient(165deg, #211131 0%, #32194b 42%, #432461 75%, #26143b 100%);
+            background:
+              linear-gradient(135deg, rgba(246, 201, 69, 0.07) 0 1px, transparent 1px 100%),
+              linear-gradient(165deg, #211131 0%, #32194b 42%, #432461 75%, #26143b 100%);
+            background-size: 34px 34px, 100% 100%;
             border-left: 1.5px solid rgba(246, 201, 69, 0.35);
             flex-direction: column;
             align-items: stretch;
@@ -224,30 +227,57 @@ export default function Navbar() {
             transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
             box-shadow: -12px 0 35px -8px rgba(18, 5, 30, 0.7);
             overflow-y: auto;
+            overflow-x: hidden;
+            isolation: isolate;
+            animation: navbarMenuTexture 16s linear infinite;
           }
 
           .navbar__links::before {
             content: '';
             position: absolute;
-            top: -40px;
-            right: -40px;
-            width: 140px;
-            height: 140px;
+            top: 8%;
+            right: -78px;
+            width: 210px;
+            height: 210px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(246, 201, 69, 0.22) 0%, transparent 70%);
+            border: 1px solid rgba(246, 201, 69, 0.25);
+            box-shadow:
+              0 0 0 22px rgba(246, 201, 69, 0.04),
+              0 0 0 44px rgba(246, 201, 69, 0.025);
             pointer-events: none;
+            z-index: -1;
+            animation: navbarMenuOrbit 12s ease-in-out infinite;
           }
 
           .navbar__links::after {
             content: '';
             position: absolute;
-            bottom: -30px;
-            left: -30px;
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(246, 110, 69, 0.18) 0%, transparent 70%);
+            inset: 0;
+            background: linear-gradient(
+              115deg,
+              transparent 12%,
+              rgba(255, 250, 240, 0.08) 30%,
+              transparent 48%
+            );
+            background-size: 220% 100%;
             pointer-events: none;
+            z-index: -1;
+            animation: navbarMenuSweep 9s ease-in-out infinite;
+          }
+
+          @keyframes navbarMenuTexture {
+            from { background-position: 0 0, 0 0; }
+            to { background-position: 34px 34px, 0 0; }
+          }
+
+          @keyframes navbarMenuOrbit {
+            0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+            50% { transform: translate3d(-14px, 18px, 0) rotate(18deg); }
+          }
+
+          @keyframes navbarMenuSweep {
+            0%, 18% { background-position: 130% 0; }
+            58%, 100% { background-position: -30% 0; }
           }
 
           .navbar__menu-header {

@@ -29,9 +29,9 @@ export const SCHOOL = {
   whatsappRaw: '919446254007',
   secondaryWhatsappRaw: '919562309061',
   email: 'alfitrahparal@gmail.com',
-  timings: 'Monday – Friday: 9:00 AM – 3:30 PM',
+  timings: 'Monday – Friday: 9:00 AM – 2:30 PM',
   mapEmbedUrl: '', // Google Maps embed link
-  instagram: 'https://instagram.com/',
+  instagram: 'https://www.instagram.com/alfitrahparal?stkn=dTFmMWd5bWh4ZHht&utm_source=qr',
   facebook: 'https://facebook.com/',
 }
 
